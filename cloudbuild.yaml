@@ -1,0 +1,7 @@
+steps:
+- name: 'eu.gcr.io/cloud-builders/kubectl'
+  args: ['set', 'image', 'deployment/mydepl', 'my-image=eu.gcr.io/ProjectRoots/myimagegit']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=eu-west-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
+  args: ['build', '-t', 'eu.gcr.io/ProjectRoots/myimagegit', '.']
