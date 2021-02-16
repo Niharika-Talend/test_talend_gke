@@ -1,4 +1,5 @@
-  name: 'eu.gcr.io/cloud-builders/mvn'
+steps: 
+ -name: 'eu.gcr.io/cloud-builders/mvn'
   args: ['install']
-  name: 'gcr.io/cloud-builders/docker'
+ -name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'eu.gcr.io/ProjectRoots/myimageit', '.']
