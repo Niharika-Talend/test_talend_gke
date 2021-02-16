@@ -1,5 +1,5 @@
 steps:
-- name: 'eu.ggcr.io/cloud-builders/mvn'
+- name: 'eu.gcr.io/cloud-builders/mvn'
   args: ['install']
-- name: 'eu.ggcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'eu.ggcr.io/ProjectRoots/myimage', '.']
+- name: 'eu.gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'eu.gcr.io/ProjectRoots/myimage', '.']
