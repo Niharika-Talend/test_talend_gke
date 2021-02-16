@@ -1,8 +1,4 @@
-steps:
-- name: 'eu.gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/mydepl', 'my-image=eu.gcr.io/ProjectRoots/myimagegit']
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=eu-west-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
-  name: 'eu.gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'eu.gcr.io/ProjectRoots/myimagegit', '.']
+  name: 'eu.gcr.io/cloud-builders/mvn'
+  args: ['install']
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'eu.gcr.io/ProjectRoots/myimageit', '.']
